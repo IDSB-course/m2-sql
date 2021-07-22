@@ -1,0 +1,35 @@
+-- a
+SELECT t2.manufacturer, AVG(t1.distance) as mean_dist
+FROM flights t1
+INNER JOIN planes t2
+ON t1.tailnum = t2.tailnum
+GROUP BY t2.manufacturer
+ORDER BY AVG(t1.distance) DESC
+LIMIT 1;
+
+-- b
+with tots AS
+   (SELECT t2.name as airport, t3.name as airline, COUNT(t1.*) as q_flights,
+		ROW_NUMBER() OVER (PARTITION BY t2.name ORDER BY COUNT(t1.*) DESC) AS rn
+	FROM flights t1
+	LEFT JOIN airports t2
+	ON t1.origin = t2.faa
+	LEFT JOIN airlines t3
+	on t1.carrier = t3.carrier
+	GROUP BY t2.name, t3.name) 
+SELECT airport, airline, q_flights 
+FROM tots
+WHERE rn = 1;
+
+-- c	
+SELECT 
+ 	CASE WHEN t2.precip > 0 THEN 1 else 0 end as precip_binary,
+	AVG(t1.dep_delay) as mean_precip
+FROM flights t1
+INNER JOIN weather t2 ON
+	t1.time_hour = t2.time_hour AND t1.origin = t2.origin
+GROUP BY t2.precip >0;
+
+
+
+

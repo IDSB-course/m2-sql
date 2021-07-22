@@ -1,0 +1,32 @@
+-- a
+SELECT *
+FROM planes
+WHERE 
+	year BETWEEN 1980 and 1990 and
+	manufacturer = 'BOEING';
+	
+-- b
+SELECT name as aerolinea
+FROM airlines
+WHERE name LIKE '%Air%';
+
+-- c
+SELECT name as aeropuerto
+FROM airports
+WHERE lat < 25.79325;
+
+-- d
+SELECT * 
+FROM weather
+ORDER BY precip DESC
+LIMIT 10;
+
+-- e
+SELECT *
+FROM flights
+WHERE distance < 90 OR
+	distance > 4980;
+
+
+
+

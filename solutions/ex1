@@ -1,0 +1,20 @@
+-- a
+SELECT *
+FROM airlines
+LIMIT 100;
+
+SELECT *
+FROM airports
+LIMIT 100;
+
+SELECT *
+FROM flights
+LIMIT 100;
+
+SELECT *
+FROM planes
+LIMIT 100;
+
+SELECT *
+FROM weather
+LIMIT 100;

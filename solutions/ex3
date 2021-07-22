@@ -1,0 +1,34 @@
+-- a
+SELECT year, month, day, COUNT(*) as q_flights 
+FROM flights
+GROUP BY year, month, day
+ORDER BY COUNT(*) DESC
+LIMIT 5;
+
+-- b
+SELECT type, engine, COUNT(*)as q_aviones
+FROM planes
+GROUP BY type, engine;
+
+-- c
+SELECT COUNT(*) as q_airports
+FROM airports
+WHERE alt > 1000;
+
+-- d
+SELECT month, origin, MAX(temp) as max_temp, MIN(temp) as min_temp 
+FROM weather
+GROUP BY month, origin
+ORDER BY month, origin;
+
+-- e
+SELECT (
+		(SELECT cast(COUNT(*) as float)
+		FROM airports
+		WHERE name LIKE '%Air%')/ 
+		(SELECT cast(COUNT(*) as float)
+		FROM airports
+		WHERE name NOT LIKE '%Air%')
+		) as percent
+
+	   

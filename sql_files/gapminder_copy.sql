@@ -1,0 +1,1 @@
+\copy public.gapminder from 'E:\IDSB\m2\files\gapminder\wegapminder.csv' WITH (FORMAT CSV, DELIMITER ',', NULL '', HEADER);
