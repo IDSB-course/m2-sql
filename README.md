@@ -26,10 +26,18 @@ Documentos de texto y presentaciones:
 
 # :open_file_folder:[solutions](https://github.com/IDSB-course/m2-sql/tree/master/solutions)
 Ejercicios resueltos de la guía práctica:
-* soluciones.R
+* **ex1**
+* **ex2**
+* **ex3**
+* **ex4**
 
 
-
+# :open_file_folder:[sql_files](https://github.com/IDSB-course/m2-sql/tree/master/sql_files)
+Archivos para crear y popular las tablas de los datasets *Gapminder* y *NYCflights* en Postgres:
+* **gapminder.sql**
+* **gapminder_copy.sql**
+* **nyc.sql**
+* **nyc_copy.sql**
 
 
 
