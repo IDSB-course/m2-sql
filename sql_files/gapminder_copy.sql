@@ -1,1 +1,1 @@
-\copy public.gapminder from 'E:\IDSB\m2\files\gapminder\wegapminder.csv' WITH (FORMAT CSV, DELIMITER ',', NULL '', HEADER);
+\copy public.gapminder from 'E:\IDSB\m2-sql\data\gapminder\gapminder.csv' WITH (FORMAT CSV, DELIMITER ',', NULL '', HEADER);
