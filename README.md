@@ -19,9 +19,9 @@ Contenedor de los 2 datasets que usaremos en el módulo:
 
 # :open_file_folder:[docs](https://github.com/IDSB-course/m2-sql/tree/master/docs)
 Documentos de texto y presentaciones:
-* **m2_practica.pdf**: Guía de ejercicios prácticos a resolver
-* **m2_teoria.pptx**: Presentación teórico práctica, soporte del video del curso
-* **postgreSQL.pptx**: Presentación de instalación de PostreSQL y PgAdmin
+* **IDSB-m2-p.pdf**: Guía de ejercicios prácticos a resolver
+* **IDSB-m2-t.pdf**: Presentación teórico práctica, soporte del video del curso
+
 
 
 # :open_file_folder:[solutions](https://github.com/IDSB-course/m2-sql/tree/master/solutions)
